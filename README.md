@@ -17,8 +17,8 @@
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Solution](https://github.com/BradleyTim/recipe-page)
+- Live Site URL: [Recipe Page](https://recipe-page-gilt-eight.vercel.app/)
 
 ## My process
 
