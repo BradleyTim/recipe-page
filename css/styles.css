@@ -1,7 +1,228 @@
-.attribution { 
+
+@font-face {
+    font-family: 'Outfit'; 
+    src: url('/assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('ttf'), 
+         url('/assets/fonts/outfit/static/Outfit-Regular.ttf') format('ttf'); 
+    font-weight: 400;  
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'Outfit-Bold'; 
+    src: url('/assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('ttf'), 
+         url('/assets/fonts/outfit/static/Outfit-Bold.ttf') format('ttf'); 
+    font-weight: 700; 
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'Outfit-SemiBold'; 
+    src: url('/assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('ttf'), 
+         url('/assets/fonts/outfit/static/Outfit-SemiBold.ttf') format('ttf'); 
+    font-weight: 600; 
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'Young Sherif'; 
+    src: url('/assets/fonts/young-serif/YoungSerif-Regular.ttf') format('ttf'); 
+    font-weight: 400; 
+    font-style: normal; 
+}
+
+:root {
+    --font-outfit: 'Outfit', sans-serif;
+    --font-youngsherif: 'Young Sherif', sans-serif;
+
+    --font-size: 16px; 
+
+    --weights-400: 400;
+    --weights-600: 600;
+    --weights-700: 700;
+
+    --white: hsl(0, 0%, 100%); 
+    --stone-100: hsl(30, 54%, 90%); 
+    --stone-150: hsl(30, 18%, 87%); 
+    --stone-600: hsl(30, 10%, 34%); 
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+
+    --mobile: 375px; 
+    --desktop: 1440px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: var(--font-youngsherif);
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.1;
+}
+
+h1, h2, h3, h4 {
+    text-wrap: balance;
+    font-family: Outfit-Bold, sans-serif;
+}
+
+h2 {
+    color: var(--brown-800);
+}
+
+p, li {
+    text-wrap: pretty;
+    /* max-width: 65ch; */
+}
+
+ul[role="list"], 
+ol[role="list"] {
+    list-style: none;
+    margin: 0;
+    padding: 0; 
+}
+
+.scroller {
+    overscroll-behavior: contain;
+    height: 50vh; 
+    overflow-y: auto;
+}
+
+section {
+    background-color: var(--white);
+    color: var(--stone-900);
+    min-width: 330px;
+}
+
+div.image img {
+    display: block;
+    width: 100%;
+    height: 150px; 
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+div:not(.image) {
+    padding-inline: 1rem;
+}
+
+.intro h1 {
+    font-family: 'Outfit-Bold', sans-serif;
+    font-size: 1.5rem;
+    margin-block: 1.5rem;
+}
+
+.preparation {
+    background-color: var(--rose-50);
+    margin-block-start: 1rem;
+    margin-inline: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.preparation h2 {
+    font-size: 1.35rem;
+    margin-block-end: 1rem;
+}
+
+.preparation ul li {
+    line-height: 1.5;
+    margin-inline-start: 2rem;
+}
+
+.ingredients {
+    margin-block-start: 1rem;
+}
+
+.ingredients h2 {
+    font-size: 1.35rem;
+    margin-block-end: 1rem;
+}
+
+.ingredients ul li {
+    line-height: 1.5;
+    margin-inline-start: 1rem;
+}
+
+.instructions {
+    margin-block-start: 1rem;
+}
+
+.instructions ol li {
+    line-height: 1.5;
+    margin-inline-start: 1rem;
+}
+
+.nutrition {
+    margin-block-start: 1rem;
+}
+
+p {
+    line-height: 1.5;
+}
+
+@media (min-width: 376px) {
+
+    body {
+        background-color: var(--stone-100);
+        display: grid;
+        place-items: center;
+    }
+
+    section {
+        max-width: 500px;
+        padding: 1rem;
+        margin-block: 3rem;
+        border-radius: 0.95rem;
+    }
+
+    .image img {
+        border-radius: 0.5rem;
+        height: 300px; 
+        /* object-fit: cover; */
+    }
+}
+
+.nutrition table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.nutrition table tbody td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.nutrition table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for even rows */
+}
+
+.nutrition table tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* White for odd rows */
+}
+
+.nutrition table tbody tr:hover {
+    background-color: #ddd; /* Light gray when hovering over rows */
+}
+  
+/* .attribution { 
     font-size: 11px; 
     text-align: center; 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    color: var(--white);
 }
+
 .attribution a { 
     color: hsl(228, 45%, 44%); 
-}
+} */
