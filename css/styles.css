@@ -61,6 +61,7 @@
 
 html, body {
     font-family: var(--font-youngsherif);
+    color: var(--stone-600);
 }
 
 h1, h2, h3, h4 {
@@ -87,6 +88,11 @@ ol[role="list"] {
     margin: 0;
     padding: 0; 
 }
+
+ul li::marker, ol li::marker {
+    color: var(--brown-800);
+    font-weight: bold;
+  }
 
 .scroller {
     overscroll-behavior: contain;
@@ -195,22 +201,29 @@ p {
     margin: 20px 0;
 }
 
+.nutrition table tbody tr:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
 .nutrition table tbody td {
     padding: 12px;
     text-align: left;
-    border: 1px solid #ddd;
 }
 
-.nutrition table tbody tr:nth-child(even) {
-    background-color: #f2f2f2; /* Light gray for even rows */
+.nutrition table tbody td:nth-child(even) {
+    color: var(--brown-800);
+}
+
+/* .nutrition table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; 
 }
 
 .nutrition table tbody tr:nth-child(odd) {
-    background-color: #ffffff; /* White for odd rows */
-}
+    background-color: #ffffff; 
+} */
 
 .nutrition table tbody tr:hover {
-    background-color: #ddd; /* Light gray when hovering over rows */
+    background-color: #ddd; 
 }
   
 /* .attribution { 
@@ -222,7 +235,8 @@ p {
     padding: 20px;
     color: var(--white);
 }
+*/
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
-} */
+} 
