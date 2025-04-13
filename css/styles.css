@@ -70,7 +70,7 @@ h1, h2, h3, h4 {
 
 h1, h2, h3, h4 {
     text-wrap: balance;
-    font-family: Outfit-Bold, sans-serif;
+    font-family: 'Young Sherif', serif;
 }
 
 h2 {
@@ -92,7 +92,7 @@ ol[role="list"] {
 ul li::marker, ol li::marker {
     color: var(--brown-800);
     font-weight: bold;
-  }
+}
 
 .scroller {
     overscroll-behavior: contain;
@@ -119,7 +119,7 @@ div:not(.image) {
 }
 
 .intro h1 {
-    font-family: 'Outfit-Bold', sans-serif;
+    font-family: 'Young Sherif', serif;
     font-size: 1.5rem;
     margin-block: 1.5rem;
 }
@@ -135,11 +135,16 @@ div:not(.image) {
 .preparation h2 {
     font-size: 1.35rem;
     margin-block-end: 1rem;
+    color: var(--rose-800);
 }
 
 .preparation ul li {
     line-height: 1.5;
     margin-inline-start: 2rem;
+}
+
+.preparation ul li::marker {
+    color: var(--rose-800);
 }
 
 .ingredients {
@@ -202,7 +207,7 @@ p {
 }
 
 .nutrition table tbody tr:not(:last-child) {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--stone-150);
 }
 
 .nutrition table tbody td {
@@ -214,6 +219,12 @@ p {
     color: var(--brown-800);
 }
 
+hr {
+    margin-inline: 1rem;
+    margin-top: 1rem;
+    color: #ccc;
+}
+
 /* .nutrition table tbody tr:nth-child(even) {
     background-color: #f2f2f2; 
 }
@@ -223,7 +234,7 @@ p {
 } */
 
 .nutrition table tbody tr:hover {
-    background-color: #ddd; 
+    background-color: var(--stone-100); 
 }
   
 /* .attribution { 
